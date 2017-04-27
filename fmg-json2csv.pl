@@ -16,6 +16,10 @@ $fmg = $json->decode($data);
 
 @cols = ('name', 'sn', 'ip', 'platform_str');
 
+printf("%s\n",
+  join ',', @vals
+  );
+
 foreach $device (@{$fmg->{'params'}->[0]->{'data'}}) {
   @vals = ();
   foreach $col (@cols) {
